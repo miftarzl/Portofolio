@@ -1049,8 +1049,7 @@ section[id] {
 
 .certificates-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 420px));
-  justify-content: center;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 2rem;
   margin-top: 2rem;
   max-width: 1200px;
@@ -1317,6 +1316,10 @@ section[id] {
 }
 
 @media (max-width: 1024px) {
+  .certificates-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .contact-wrapper {
     grid-template-columns: 1fr;
     gap: 2rem;
@@ -1379,6 +1382,10 @@ section[id] {
 }
 
 @media (max-width: 576px) {
+  .certificates-grid {
+    grid-template-columns: 1fr;
+  }
+
   .hero h1 {
     font-size: 2rem;
   }
